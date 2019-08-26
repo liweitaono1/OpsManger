@@ -1,0 +1,38 @@
+- name: deploy jenkins
+  hosts: 10.0.0.59
+  remote_user: root
+  tasks:
+    - name: exec jenkins
+      shell:  python /data/Qxkj_Scripts/yw_jenkins.py  {{build_name}}
+    
+- name: stop gameserver
+  hosts: 10.0.0.59
+  tasks:
+    - name: stop server
+      shell: source /etc/profile && cd /data/Qxkj_Server/{{servername}}/gameserver && sh manager.sh stop 
+
+- name: deploy jenkins
+  hosts: 10.0.0.59
+  remote_user: root
+  tasks:
+    - name: update gameserver
+      synchronize:
+        src: /var/lib/jenkins/workspace/{{build_name}}/GameServer/gameserver/
+        dest: /data/Qxkj_Server/{{servername}}/gameserver/
+      delegate_to: 10.0.0.160
+
+- name: start gameserver
+  hosts: 10.0.0.59
+  remote_user: root
+  tasks:
+    - name: config file
+      copy: 
+        src: /data/server/opsmanager/config/{{servername}}.xml 
+        dest: /data/Qxkj_Server/{{servername}}/gameserver/config/server-config.xml
+        owner: root
+        group: root
+        mode: 0755
+        force: yes
+        
+    - name: start gameserver
+      shell: source /etc/profile && cd /data/Qxkj_Server/{{servername}}/gameserver/ && sh manager.sh start

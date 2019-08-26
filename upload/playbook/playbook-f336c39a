@@ -1,0 +1,12 @@
+- name: deploy jenkins
+  hosts: 10.0.0.59
+  remote_user: root
+  tasks:
+    - name: exec jenkins
+      shell:  python /data/Qxkj_Scripts/hotupdate_yw_jenkins.py  {{build_name}} {{server_name}}
+
+- name: update
+  hosts: 10.0.0.54
+  tasks:
+    - name: update file 
+      shell: python /data/Qxkj_Scripts/hotupdate.py {{files}} {{build_name}} {{server_name}}

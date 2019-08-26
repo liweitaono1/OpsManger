@@ -1,0 +1,148 @@
+﻿2019-08-03 11:09:10 [ERROR] runner.py[line:151] run playbook failed: the field 'hosts' is required but was not set
+2019-08-03 11:55:04 [ERROR] server.py[line:248] Exception inside application: not all arguments converted during string formatting
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py", line 179, in __call__
+    return await self.inner(receive, self.send)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/utils.py", line 52, in await_many_dispatch
+    await dispatch(result)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/asgiref/sync.py", line 108, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/root/.pyenv/versions/3.6.6/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/asgiref/sync.py", line 123, in thread_handler
+    return self.func(*args, **kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/generic/websocket.py", line 60, in websocket_receive
+    self.receive(text_data=message["text"])
+  File "/data/server/opsmanager/OpsManage/deploy/comsumers.py", line 227, in receive
+    self.run_playbook(request)
+  File "/data/server/opsmanager/OpsManage/deploy/comsumers.py", line 269, in run_playbook
+    self.send("读取剧本错误: {ex}" % str(ex))
+  not all arguments converted during string formatting
+2019-08-03 14:37:59 [ERROR] server.py[line:248] Exception inside application: not all arguments converted during string formatting
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py", line 179, in __call__
+    return await self.inner(receive, self.send)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/utils.py", line 52, in await_many_dispatch
+    await dispatch(result)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/asgiref/sync.py", line 108, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/root/.pyenv/versions/3.6.6/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/asgiref/sync.py", line 123, in thread_handler
+    return self.func(*args, **kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/generic/websocket.py", line 60, in websocket_receive
+    self.receive(text_data=message["text"])
+  File "/data/server/opsmanager/OpsManage/deploy/comsumers.py", line 227, in receive
+    self.run_playbook(request)
+  File "/data/server/opsmanager/OpsManage/deploy/comsumers.py", line 269, in run_playbook
+    self.send("读取剧本错误: {ex}" % str(ex))
+  not all arguments converted during string formatting
+2019-08-05 13:42:16 [ERROR] dispos.py[line:220] 更新剧本失败: (1406, "Data too long for column 'playbook_type' at row 1")
+2019-08-05 13:42:17 [WARNING] assets.py[line:978] 资产组查询失败：
+2019-08-05 13:42:17 [ERROR] server.py[line:248] Exception inside application: local variable 'inventoryGroup' referenced before assignment
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py", line 179, in __call__
+    return await self.inner(receive, self.send)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/utils.py", line 52, in await_many_dispatch
+    await dispatch(result)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/asgiref/sync.py", line 108, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/root/.pyenv/versions/3.6.6/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/asgiref/sync.py", line 123, in thread_handler
+    return self.func(*args, **kwargs)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/generic/websocket.py", line 60, in websocket_receive
+    self.receive(text_data=message["text"])
+  File "/data/server/opsmanager/OpsManage/deploy/comsumers.py", line 227, in receive
+    self.run_playbook(request)
+  File "/data/server/opsmanager/OpsManage/deploy/comsumers.py", line 255, in run_playbook
+    sList,resource = self.allowcator(server_model, request)
+  File "/data/server/opsmanager/OpsManage/dao/assets.py", line 943, in allowcator
+    return func(request)
+  File "/data/server/opsmanager/OpsManage/dao/assets.py", line 979, in inventory_groups
+    resource[inventoryGroup.group_name] = {}
+  local variable 'inventoryGroup' referenced before assignment
+2019-08-05 13:48:15 [WARNING] server.py[line:223] Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fd6a81ab228>()]>> for connection <WebRequest at 0x7fd6a81737b8 method=POST uri=/apps/config/ clientproto=HTTP/1.1> took too long to shut down and was killed.
+2019-08-05 13:53:17 [WARNING] server.py[line:223] Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fd6a81464c8>()]>> for connection <WebRequest at 0x7fd6a8183630 method=GET uri=/deploy/playbook/ clientproto=HTTP/1.1> took too long to shut down and was killed.
+2019-08-07 15:05:46 [WARNING] dispos.py[line:195] 添加部署脚本失败: (1062, "Duplicate entry '停服更新内网游戏服' for key 'playbook_name'")
+2019-08-07 15:06:16 [WARNING] dispos.py[line:195] 添加部署脚本失败: (1062, "Duplicate entry '停服更新内网游戏服' for key 'playbook_name'")
+2019-08-08 15:46:13 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-08 15:46:13 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-08 15:46:13 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-08 20:34:52 [WARNING] server.py[line:223] Application instance <Task pending coro=<SessionMiddlewareInstance.__call__() running at /root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py:179> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7ff13808d1f8>()]>> for connection <WebSocketProtocol client=['10.0.1.75', 62291] path=b'/ws/ansible/playbook/SrjkW1EN/'> took too long to shut down and was killed.
+2019-08-08 20:49:35 [WARNING] server.py[line:223] Application instance <Task pending coro=<SessionMiddlewareInstance.__call__() running at /root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py:179> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7ff15410e0a8>()]>> for connection <WebSocketProtocol client=['10.0.1.75', 62368] path=b'/ws/ansible/playbook/RHw2Afcf/'> took too long to shut down and was killed.
+2019-08-08 21:02:48 [WARNING] server.py[line:223] Application instance <Task pending coro=<SessionMiddlewareInstance.__call__() running at /root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py:179> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7ff1540495e8>()]>> for connection <WebSocketProtocol client=['10.0.1.42', 55919] path=b'/ws/ansible/playbook/FL8ljTlj/'> took too long to shut down and was killed.
+2019-08-08 21:38:46 [WARNING] server.py[line:223] Application instance <Task pending coro=<SessionMiddlewareInstance.__call__() running at /root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py:179> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7ff11eb1aca8>()]>> for connection <WebSocketProtocol client=['10.0.1.75', 62644] path=b'/ws/ansible/playbook/Y3jQNM93/'> took too long to shut down and was killed.
+2019-08-09 09:20:54 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-09 09:20:54 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-09 09:20:54 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-09 09:55:13 [ERROR] server.py[line:248] Exception inside application: Reader at end of file
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py", line 179, in __call__
+    return await self.inner(receive, self.send)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/utils.py", line 59, in await_many_dispatch
+    await task
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    result = task.result()
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels_redis/core.py", line 184, in receive
+    self.receive_loop_task.result()
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels_redis/core.py", line 202, in receive_loop
+    real_channel, message = await self.receive_single(general_channel)
+  File "/root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels_redis/core.py", line 222, in receive_single
+    content = await connection.blpop(channel_key, timeout=self.blpop_timeout)
+  Reader at end of file
+2019-08-09 11:17:32 [WARNING] server.py[line:223] Application instance <Task pending coro=<SessionMiddlewareInstance.__call__() running at /root/.pyenv/versions/opsmanager/lib/python3.6/site-packages/channels/sessions.py:179> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.6/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7ff11eaf6588>()]>> for connection <WebSocketProtocol client=['10.0.1.75', 63605] path=b'/ws/ansible/playbook/ha59iczd/'> took too long to shut down and was killed.
+2019-08-13 13:50:54 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:50:54 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:50:57 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:50:57 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:50:57 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:06 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:06 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:06 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:07 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:07 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:17 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:17 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:38 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:38 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-13 13:51:38 [ERROR] comsumers.py[line:208] 记录模块执行日志失败:(2006, 'MySQL server has gone away')
+2019-08-21 15:11:35 [ERROR] database.py[line:499] 获取DB实例失败: DataBase_Server_Config matching query does not exist.
+2019-08-21 15:51:02 [WARNING] assets_api.py[line:535] 获取资产信息失败: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2019-08-21 15:51:04 [WARNING] assets_api.py[line:535] 获取资产信息失败: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2019-08-21 15:51:06 [WARNING] assets_api.py[line:535] 获取资产信息失败: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2019-08-21 15:51:07 [WARNING] assets_api.py[line:535] 获取资产信息失败: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2019-08-21 16:05:18 [ERROR] base.py[line:194] 创建列表类型连接池失败: (2003, "Can't connect to MySQL server on '10.0.0.59' (timed out)")
+2019-08-21 16:05:21 [ERROR] base.py[line:194] 创建列表类型连接池失败: (2003, "Can't connect to MySQL server on '10.0.0.59' (timed out)")
+2019-08-21 20:26:28 [WARNING] assets_api.py[line:535] 获取资产信息失败: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2019-08-21 20:26:30 [WARNING] assets_api.py[line:535] 获取资产信息失败: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
